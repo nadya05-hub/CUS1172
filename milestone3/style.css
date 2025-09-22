@@ -1,0 +1,125 @@
+/* variables */
+:root {
+  --background-color: #ffe6f0;
+  --content-background-color: #ffe6f0;
+  --sidebar-background-color: #ffe6f0;
+  --text-color: #9c675e;
+  --sidebar-text-color: #9c6363;
+  --link-color: #d1b7ff;
+  --link-hover-color: #e947a0;
+  --margin: 8px;
+  --padding: 30px;
+  --border: 4px solid #ffffff;
+  --round-borders: 10px;
+  --sidebar-width: 150px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ /* Start https://www.cursors-4u.com */ 
+ * {cursor: url(https://cur.cursors-4u.net/anime/ani-1/ani195.ani), 
+  url(https://cur.cursors-4u.net/anime/ani-1/ani195.png), 
+  auto !important;} 
+  /* End https://www.cursors-4u.com */
+
+
+
+body {
+  display: grid;
+  color: var(--text-color);
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 14px;
+  margin: 50px;
+  border-radius: 30px;
+  background-image: url(
+    https://nyaa.neocities.org/sozai/backgrounds/gridpatternp.png
+  );
+}
+
+.layout {
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "sidebar main";
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: auto 1fr;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 15px;
+}
+
+main {
+  grid-area: main;
+  border: var(--border);
+  background: var(--content-background-color);
+  overflow-y: auto;
+  padding: 30px;
+  border-radius: 10px;
+  line-height: 1.5;
+}
+
+header {
+  grid-area: header;
+  font-size: 2em;
+  border: var(--border);
+  border-radius: 20px;
+  background-color: var(--background-color);
+}
+
+.header-content {
+  padding: 35px;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+aside {
+  grid-area: sidebar;
+  border: var(--border);
+  border-radius: var(--round-borders);
+  background: var(--sidebar-background-color);
+  overflow: hidden;
+  padding: 40px;
+  color: var(--sidebar-text-color);
+}
+
+.left-sidebar {
+  grid-area: sidebar;
+}
+
+.sidebar-title {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.sidebar-section ul,
+.sidebar-section ol {
+  padding-left: 1.5em;
+}
+
+nav {
+  margin-bottom: 3em;
+}
+
+nav .sidebar-title {
+  margin-bottom: 0.5em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 -5px;
+}
+
+main a,
+main a:visited {
+  color: var(--link-color);
+}
